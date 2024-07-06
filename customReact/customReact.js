@@ -1,4 +1,4 @@
-function mainContainer(reactelement,container){
+function customRender(reactelement,container){
 // const domelement = document.createElement(reactelement.type)
 // domelement.innerHTML = reactelement.children
 // domelement.setAttribute('href',reactelement.props.href)
@@ -6,7 +6,7 @@ function mainContainer(reactelement,container){
 // container.appendChild(domelement)
 
 const domelement = document.createElement(reactelement.type)
-domelement.innerHTML = reactelement.children
+domelement.innerHTML = reactelement.child
 for(const prop in reactelement.props){
     if(prop==='child') continue;
     domelement.setAttribute(prop,reactelement.props[prop])
